@@ -13,7 +13,8 @@
 		holes_spacing = 31;
 		borders = (b_width - holes_spacing)/2;
 		h_radius = 1.5;
-		
+   //AXIS
+		axis_radius = 2.5;
 
 difference() {
 	//BODY
@@ -42,5 +43,7 @@ difference() {
 	{
 		translate(i) rotate([90,0,0]) cylinder(h=80,r=h_radius, $fn=10);
 	}
+	//AXIS HOLE
+	translate([b_width/2,80,b_height/2]) rotate([90,0,0]) cylinder(h=90,r=axis_radius, $fn=10);
 	
 }
